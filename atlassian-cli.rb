@@ -2,9 +2,9 @@ require 'formula'
 
 class AtlassianCli < Formula
   homepage 'https://developer.atlassian.com/display/DOCS/Atlassian+Plugin+SDK+Documentation'
-  url 'https://bobswift.atlassian.net/wiki/download/attachments/16285777/atlassian-cli-2.6.0-distribution.zip'
-  version '2.6.0'
-  sha1 'ff4600b73371ccaa6964ecb47acd6641cfb6ab3c'
+  url 'https://bobswift.atlassian.net/wiki/download/attachments/16285777/atlassian-cli-5.1.0-distribution.zip'
+  version '5.1.0'
+  sha1 'c5571bb2486b44d90d1c82a1f6f72871b1aa6dff'
 
   def shim_script target
     <<-EOS.undent
@@ -18,6 +18,7 @@ class AtlassianCli < Formula
     Dir["*.sh"].map { |p| Pathname.new p.sub('.sh','-cli') }.each { |path|
       script_name = path.basename
       bin_name = path.basename '-cli'
+      next if bin_name == 'atlassian-cli'
       (bin+script_name).write shim_script(bin_name)
     }
 
