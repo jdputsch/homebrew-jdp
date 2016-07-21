@@ -2,9 +2,9 @@ require 'formula'
 
 class AtlassianCli < Formula
   homepage 'https://developer.atlassian.com/display/DOCS/Atlassian+Plugin+SDK+Documentation'
-  url 'https://bobswift.atlassian.net/wiki/download/attachments/16285777/atlassian-cli-5.1.0-distribution.zip'
-  version '5.1.0'
-  sha1 'c5571bb2486b44d90d1c82a1f6f72871b1aa6dff'
+  url 'https://bobswift.atlassian.net/wiki/download/attachments/16285777/atlassian-cli-5.4.0-distribution.zip'
+  version '5.4.0'
+  sha1 '947ce32c6cd5f4b7cdd4511e9e3bd032d2b10203'
 
   def shim_script target
     <<-EOS.undent
